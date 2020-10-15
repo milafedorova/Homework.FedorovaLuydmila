@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class MyTask4 {
     public static void main(String[] args) {
-        int[] myArray = {-10, 7, 2, 1227, 87, 998, -877, 3, 0, 5, 99};
+        int[] myArray = {-10, 7, 1227, 87, 998, -877, 3, 0, 5, 99};
         reverseArray(myArray);
         System.out.println(Arrays.toString(myArray));
     }

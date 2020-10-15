@@ -20,3 +20,4 @@ public class MyTask3 {
         return itog;
     }
 }
+
