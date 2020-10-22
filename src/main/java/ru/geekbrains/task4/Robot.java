@@ -1,12 +1,11 @@
 package ru.geekbrains.task4;
 
-public class Robot extends Participants {
+public class Robot extends Participants implements Jump,Run{
     private String name;
     private int age;
     private static final int THE_LENTH_OF_RUN = 80;
     private static final int THE_HEIGHT_OF_JUMP = 40;
 
-    @Override
     public boolean run(int theLongRoad){
         if (theLongRoad <= THE_LENTH_OF_RUN) {
             System.out.println(this.name + " успешно пробежал дорожку");
@@ -16,7 +15,7 @@ public class Robot extends Participants {
             return false;
         }
     }
-    @Override
+
     public  boolean jump (int theHeightWall){
         if (theHeightWall <= THE_HEIGHT_OF_JUMP) {
             System.out.println(this.name + " успешно перепрыгнул стену");

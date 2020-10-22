@@ -1,25 +1,19 @@
 package ru.geekbrains.task4;
 
-public class Treadmill extends Obstacles{
+public class Treadmill extends Obstacles implements Treadmill1{
     private final int theLongRoad;
 
     public Treadmill(int theLongRoad) {
         this.theLongRoad = theLongRoad;
     }
 
-    @Override
     public int getTheLongRoad() {
-        return theLongRoad;
+        return this.theLongRoad;
     }
 
     @Override
     public String getType() {
         return "treadmill";
-    }
-
-    @Override
-    public int getTheHeightWall() {
-        return 0;
     }
 
 }

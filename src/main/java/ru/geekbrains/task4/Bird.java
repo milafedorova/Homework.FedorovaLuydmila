@@ -1,13 +1,15 @@
 package ru.geekbrains.task4;
 
-public class Cat extends Participants implements Run, Jump {
+
+public class Bird extends Participants implements Run, Jump, Fly {
     private String name;
     private int age;
-    private static final int THE_LENTH_OF_RUN = 10;
-    private static final int THE_HEIGHT_OF_JUMP = 10;
+    private static final int THE_LENTH_OF_RUN = 8;
+    private static final int THE_HEIGHT_OF_JUMP = 3;
+    private static final int THE_LENGTH_OF_ABYSS = 90;
 
 
-    public Cat(String name, int age){
+    public Bird(String name, int age){
         this.name=name;
         this.age=age;
     }
@@ -43,6 +45,16 @@ public class Cat extends Participants implements Run, Jump {
             return true;
         } else {
             System.out.println(this.name + " не смог пробежать дорожку");
+            return false;
+        }
+    }
+
+    public boolean fly(int theLengthAbyss) {
+        if (theLengthAbyss <= THE_LENGTH_OF_ABYSS) {
+            System.out.println(this.name + " успешно перелетел стену");
+            return true;
+        } else {
+            System.out.println(this.name + " не смог перелететь стену");
             return false;
         }
     }

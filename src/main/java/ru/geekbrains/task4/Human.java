@@ -1,12 +1,13 @@
 package ru.geekbrains.task4;
 
-public class Human extends Participants {
+public class Human extends Participants implements Jump, Run, Swim{
     private final String name;
     private int age;
     private static final int THE_LENTH_OF_RUN = 50;
     private static final int THE_HEIGHT_OF_JUMP = 50;
+    private static final int THE_LENGTH_OF_POOL = 50;
 
-    @Override
+
     public boolean run(int theLongRoad){
         if (theLongRoad <= THE_LENTH_OF_RUN) {
             System.out.println(this.name + " успешно пробежал дорожку");
@@ -16,7 +17,16 @@ public class Human extends Participants {
             return false;
         }
     }
-    @Override
+    public boolean swim(int theLengthPool){
+        if (theLengthPool <= THE_LENGTH_OF_POOL) {
+            System.out.println(this.name + " успешно переплыл бассейн");
+            return true;
+        } else {
+            System.out.println(this.name + " не смог переплыл бассейн");
+            return false;
+        }
+    }
+
     public  boolean jump (int theHeightWall){
         if (theHeightWall <= THE_HEIGHT_OF_JUMP) {
             System.out.println(this.name + " успешно перепрыгнул стену");
@@ -42,4 +52,5 @@ public class Human extends Participants {
     public void setAge(int age) {
         this.age = age;
     }
+
 }
